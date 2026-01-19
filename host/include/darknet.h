@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <pthread.h>
-
+void darknet_main(int argc, char **argv); // 添加
 #ifdef GPU
     #define BLOCK 512
 

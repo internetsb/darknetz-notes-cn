@@ -189,7 +189,7 @@ void train_classifier(char *datacfg, char *cfgfile, char *weightfile_o, int *gpu
         char pp_str_end[5];
         sprintf(pp_str_end, "%d", partition_point2);
 
-        char *output_dir[80];
+        char output_dir[80]; //修复
         strcpy(output_dir, "/media/results/train_");
         strcat(output_dir, ptr);
         strcat(output_dir, "_pps");
@@ -774,7 +774,7 @@ void predict_classifier(char *datacfg, char *cfgfile, char *weightfile, char *fi
                 char pp_str_end[5];
                 sprintf(pp_str_end, "%d", partition_point2);
 
-                char *output_dir[80];
+                char output_dir[80]; //修复
                 strcpy(output_dir, "/media/results/predict_");
                 strcat(output_dir, ptr);
                 strcat(output_dir, "_pps");

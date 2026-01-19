@@ -3,7 +3,7 @@
 #include <time.h>
 #include <stdlib.h>
 #include <stdio.h>
-
+#include <darknet.h>  //添加
 
 extern void predict_classifier(char *datacfg, char *cfgfile, char *weightfile, char *filename, int top);
 extern void test_detector(char *datacfg, char *cfgfile, char *weightfile, char *filename, float thresh, float hier_thresh, char *outfile, int fullscreen);
@@ -405,7 +405,7 @@ void darknet_main(int argc, char **argv)
     //test_convolutional_layer();
     if(argc < 2){
         fprintf(stderr, "usage: %s <function>\n", argv[0]);
-        return 0;
+        return;  // 修复
     }
     gpu_index = find_int_arg(argc, argv, "-i", 0);
     if(find_arg(argc, argv, "-nogpu")) {

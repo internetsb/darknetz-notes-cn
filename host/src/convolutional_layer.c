@@ -472,7 +472,7 @@ void backward_bias_diff(float *bias_updates, float *delta, int batch, int n, int
     }
 }
 
-debug_num = 0;
+unsigned int debug_num = 0; // 修复
 
 void forward_convolutional_layer(convolutional_layer l, network net)
 {
